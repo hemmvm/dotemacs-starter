@@ -10,5 +10,15 @@ git clone https://github.com/hemmvm/dotemacs-starter.git
 ln -s dotemacs-starter ~/.emacs.d
 ```
 
+## Migration
+
+Initially, you might want to switch back and forth between your new
+configuration and the existing one (i.e. `~/emacs.d`).
+
+You can make Emacs temporarily use another configuration by adjusting the process' environment, e.g.:
+```bash
+HOME=~/repos/dotemacs-starter emacs .
+```
+
 ## License
 MIT
