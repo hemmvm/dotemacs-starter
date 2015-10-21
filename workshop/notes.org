@@ -1,0 +1,133 @@
+* Prelude
+** Motivation
+** TOC
+   1. Basics
+
+   2. Real-World Emacs
+      - Structuring your config
+      - Essential tools and packages: Configuration and Usage
+
+   3. Starting out from scratch
+
+** Notation
+   | <C-x M-o> | keybinding               |
+   | `foo`     | elisp command / function |
+
+* Basics
+** Commands / Functions
+*** Menu
+   | `execute-extended-command` | <M-x> |
+
+*** Loading elisp files
+    - `load-file`
+
+*** Interactive evaluation
+    | <C-M-x>   | `eval-defun`     |
+    | <C-x C-e> | `eval-last-sexp` |
+
+
+*** Keybindings
+    - Already predefined for you
+    - Custom keybindings:
+      - `global-set-key`
+      - `define-key`
+      - ...
+
+** Help / Documentation
+   - `help`
+     | f | `describe-function` |
+     | k | `describe-key`      |
+     | m | `describe-mode`     |
+     | r | `info`              |
+
+   - `find-function`
+
+** Core Concepts
+*** Content hierarchy
+    | frames         |     N |
+    | ,, minibuffer  |     1 |
+    | ,, windows     |     N |
+    | ,, ,, modeline |     1 |
+    | ,, ,, buffer   |     1 |
+    | ,, ,, ,, file  | {0,1} |
+
+**** w/ Elscreen
+    | frames            |     N |
+    | ,, minibuffer     |     1 |
+    | ,, screen         |     N |
+    | ,, ,, windows     |     N |
+    | ,, ,, ,, modeline |     1 |
+    | ,, ,, ,, buffer   |     1 |
+    | ,, ,, ,, ,, file  | {0,1} |
+
+*** Modes
+    | Major | 1 |
+    | Minor | N |
+
+    - Mode hooks: `add-hook`
+
+*** Keymaps
+    - Var `global-map`
+    - mode-maps
+
+*** Features
+    - "Modules" / Packages
+
+**** Byte compilation
+     - .elc
+     - `byte-compile-file`
+     - `byte-recompile-directory`
+
+**** Load Path
+     - e.g.
+       (add-to-list 'load-path "~/.emacs.d/site-lisp")
+
+**** Package Manager
+     - package.el
+       - `require`
+       - `provide`
+
+**** Package Archives
+     - ELPA, MELPA
+       - `package-install`
+       - `list-packages`
+       - Web (e.g. https://melpa.org)
+
+** Config
+   ~
+   │
+   ├── .emacs.d
+       │
+       ├── init.el
+       │
+       ├── site-lisp
+       │   ├── custom-1.el
+       │   ├── custom-2.el
+       │
+       ├── elpa
+           ├── vendor-package-1
+           │   │
+           │   ├── vendor-1-1.el
+           │   ├── vendor-1-2.el
+           │
+           ├── vendor-package-2
+               │
+               ├── vendor-2.el
+
+** Survival Kit
+   |                            |           |
+   | Quit Emacs                 | <C-x C-c> |
+   | `execute-extended-command` | <M-x>     |
+   | `keyboard-quit`            | <C-g>     |
+   | `info-exit`                | <q>       |
+   |                            |           |
+   | `find-file`                | <C-x C-f> |
+   | `save-buffer`              | <C-x C-s> |
+   | `switch-to-buffer`         | <C-x b>   |
+   | `kill-buffer`              | <C-x k>   |
+   |                            |           |
+   | `split-window-below`       | <C-x 2>   |
+   | `split-window-right`       | <C-x 3>   |
+   | `delete-window`            | <C-x 0>   |
+   | `other-window`             | <C-x o>   |
+   |                            |           |
