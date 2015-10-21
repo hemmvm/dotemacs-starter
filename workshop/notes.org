@@ -94,6 +94,7 @@
        - Web (e.g. https://melpa.org)
 
 ** Config
+   #+BEGIN_EXAMPLE
    ~
    │
    ├── .emacs.d
@@ -113,6 +114,7 @@
            ├── vendor-package-2
                │
                ├── vendor-2.el
+   #+END_EXAMPLE
 
 ** Survival Kit
    |                            |           |
