@@ -1,7 +1,7 @@
 # Minimal Emacs Config
 
 Pretty minimal Emacs configuration as discussed in the
-CUGB's Emacs workshop series ([notes][https://github.com/hemmvm/dotemacs-starter/blob/master/workshop/notes.org]).
+CUGB's Emacs workshop series ([notes](https://github.com/hemmvm/dotemacs-starter/blob/master/workshop/notes.org)).
 
 For a more complete setup, see [dotemacs](https://github.com/hemmvm/dotemacs).
 
