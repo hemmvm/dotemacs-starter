@@ -11,36 +11,36 @@
 
 ** Notation
    | <C-x M-o> | keybinding               |
-   | `foo`     | elisp command / function |
+   | ~foo~     | elisp command / function |
 
 * Basics
 ** Commands / Functions
 *** Menu
-   | `execute-extended-command` | <M-x> |
+   | ~execute-extended-command~ | <M-x> |
 
 *** Loading elisp files
-    - `load-file`
+    - ~load-file~
 
 *** Interactive evaluation
-    | <C-M-x>   | `eval-defun`     |
-    | <C-x C-e> | `eval-last-sexp` |
+    | <C-M-x>   | ~eval-defun~     |
+    | <C-x C-e> | ~eval-last-sexp~ |
 
 
 *** Keybindings
     - Already predefined for you
     - Custom keybindings:
-      - `global-set-key`
-      - `define-key`
+      - ~global-set-key~
+      - ~define-key~
       - ...
 
 ** Help / Documentation
-   - `help`
-     | f | `describe-function` |
-     | k | `describe-key`      |
-     | m | `describe-mode`     |
-     | r | `info`              |
+   - ~help~
+     | f | ~describe-function~ |
+     | k | ~describe-key~      |
+     | m | ~describe-mode~     |
+     | r | ~info~              |
 
-   - `find-function`
+   - ~find-function~
 
 ** Core Concepts
 *** Content hierarchy
@@ -64,10 +64,10 @@
     | Major | 1 |
     | Minor | N |
 
-    - Mode hooks: `add-hook`
+    - Mode hooks: ~add-hook~
 
 *** Keymaps
-    - Var `global-map`
+    - Var ~global-map~
     - mode-maps
 
 *** Features
@@ -75,8 +75,8 @@
 
 **** Byte compilation
      - .elc
-     - `byte-compile-file`
-     - `byte-recompile-directory`
+     - ~byte-compile-file~
+     - ~byte-recompile-directory~
 
 **** Load Path
      - e.g.
@@ -84,13 +84,13 @@
 
 **** Package Manager
      - package.el
-       - `require`
-       - `provide`
+       - ~require~
+       - ~provide~
 
 **** Package Archives
      - ELPA, MELPA
-       - `package-install`
-       - `list-packages`
+       - ~package-install~
+       - ~list-packages~
        - Web (e.g. https://melpa.org)
 
 ** Config
@@ -119,17 +119,17 @@
 ** Survival Kit
    |                            |           |
    | Quit Emacs                 | <C-x C-c> |
-   | `execute-extended-command` | <M-x>     |
-   | `keyboard-quit`            | <C-g>     |
-   | `info-exit`                | <q>       |
+   | ~execute-extended-command~ | <M-x>     |
+   | ~keyboard-quit~            | <C-g>     |
+   | ~info-exit~                | <q>       |
    |                            |           |
-   | `find-file`                | <C-x C-f> |
-   | `save-buffer`              | <C-x C-s> |
-   | `switch-to-buffer`         | <C-x b>   |
-   | `kill-buffer`              | <C-x k>   |
+   | ~find-file~                | <C-x C-f> |
+   | ~save-buffer~              | <C-x C-s> |
+   | ~switch-to-buffer~         | <C-x b>   |
+   | ~kill-buffer~              | <C-x k>   |
    |                            |           |
-   | `split-window-below`       | <C-x 2>   |
-   | `split-window-right`       | <C-x 3>   |
-   | `delete-window`            | <C-x 0>   |
-   | `other-window`             | <C-x o>   |
+   | ~split-window-below~       | <C-x 2>   |
+   | ~split-window-right~       | <C-x 3>   |
+   | ~delete-window~            | <C-x 0>   |
+   | ~other-window~             | <C-x o>   |
    |                            |           |
