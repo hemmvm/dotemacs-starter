@@ -94,7 +94,8 @@
        - Web (e.g. https://melpa.org)
 
 ** Config
-   #+BEGIN_EXAMPLE
+*** Structure
+#+BEGIN_EXAMPLE
    ~
    │
    ├── .emacs.d
@@ -114,7 +115,15 @@
            ├── vendor-package-2
                │
                ├── vendor-2.el
-   #+END_EXAMPLE
+#+END_EXAMPLE
+
+*** Temporarily using another config
+Given your emacs config resides in ~/foo/bar/.emacs.d~ -
+then you'd have set the ~HOME~ environment variable to be ~/foo/bar~.
+
+#+BEGIN_EXAMPLE
+   $ HOME=<path-to-dir-containing-your-dotemacs-dir> emacs
+#+END_EXAMPLE
 
 ** Survival Kit
    |                            |           |
