@@ -24,6 +24,7 @@
 *** Interactive evaluation
     | <C-M-x>   | ~eval-defun~     |
     | <C-x C-e> | ~eval-last-sexp~ |
+    | <C-c C-k> | ~eval-buffer~    |
 
 
 *** Keybindings
